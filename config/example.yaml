@@ -1,0 +1,24 @@
+splunk:
+  home: /opt/splunk
+  package_path: /tmp/splunk-package.tgz
+  management_port: 8089
+  web_port: 8000
+  user: splunk
+  group: splunk
+
+execution:
+  dry_run: true
+  require_approval: true
+  allow_firewall_changes: false
+  allowed_commands:
+    - id
+    - uname
+    - cat
+    - test
+    - mkdir
+    - tar
+    - useradd
+    - groupadd
+    - chown
+    - systemctl
+    - ss
